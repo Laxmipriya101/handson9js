@@ -1,0 +1,144 @@
+<html lang="en">
+  <head>
+    <title>js9</title>
+  </head>
+  <body>
+    <h1 style="color: red">Array of Objects</h1>
+    <h2>
+      1. We are interested in retrieving only the student's names; all the names
+      should be in caps.
+    </h2>
+    <pre style="color: blue">
+      let studentRecords = [{name:'John',id:123,marks:98},
+                            {name:'Baba',id:101,marks:23},
+                            {name:'yoga',id:200,marks:45},
+                            {name:'Wick',id:115,marks:75}]
+          let ans =[];
+          for(let i=0;i&ltstudentRecords.length;i++){
+               ans.push(studentRecords[i].name.toUpperCase());
+          }
+          console.log(ans);
+    </pre>
+
+    <h2>
+      2.Suppose we have the same dataset as above but this time we want to get
+      the details of students who scored more than 50 marks.
+    </h2>
+
+    <pre style="color: blue">
+    let studentRecords = [{name:'John',id:123,marks:98},
+                          {name:'Baba',id:101,marks:23},
+                          {name:'yoga'id:200,marks:45},
+                          {name:'Wick',id:115,marks:75}]
+       let ans =[];
+       for(let i=0; i&ltstudentRecords.length; i++){
+        if(studentRecords[i].marks&gt50){
+          ans.push(studentRecords[i]);
+        }
+       }
+       console.log(ans);
+    </pre>
+
+    <h2>
+      3. Retrieve the details of students who scored more than 50 marks and have
+      IDs greater than 120.
+    </h2>
+    <pre style="color: blue">
+         let s = [{name:'John',id:123,marks:98},
+                          {name:'Baba',id:101,marks:23},
+                          {name:'yoga'id:200,marks:45},
+                          {name:'Wick',id:115,marks:75}]
+               let ans = [] ;
+               for(let i=0;i&lts.length;i++)  {
+                if((s[i].marks&gt50)&&(s[i].id&gt120)){
+                  ans.push(s[i]);
+                }
+               }
+           console.log(ans);           
+    </pre>
+
+    <h2>Q.4</h2>
+    <pre style="color: blue">
+         let s = [{name:'John',id:123,marks:98},
+                          {name:'Baba',id:101,marks:23},
+                          {name:'yoga'id:200,marks:45},
+                          {name:'Wick',id:115,marks:75}]
+                let ans =[] ;
+                let a=0;
+                for(let i=0;i&lts.length;i++) {
+                  a+=s[i].marks;
+                }  
+            console.log(a) ;         
+    </pre>
+
+    <h2>Q.5</h2>
+    <pre style="color: blue">
+ 
+         let s = [{name:'John',id:123,marks:98},
+                          {name:'Baba',id:101,marks:23},
+                          {name:'yoga'id:200,marks:45},
+                          {name:'Wick',id:115,marks:75}]
+              let ans=[] ;
+              for(let i=0;i&lts.length;i++) {
+                if(s[i].marks&gt50){
+                  ans.push(s[i].name);
+                }
+              }
+              console.log(ans);         
+    </pre>
+
+    <h2>Q.6</h2>
+    <pre style="color: blue">
+        let s = [{name:'John',id:123,marks:98},
+                          {name:'Baba',id:101,marks:23},
+                          {name:'yoga'id:200,marks:45},
+                          {name:'Wick',id:115,marks:75}]
+           let ans=[] ;
+           let a=0;
+              for(let i=0;i&lts.length;i++) {
+                if(s[i].id&gt120){
+                  a+=s[i].marks;
+                }
+              }
+              console.log(a);                 
+    </pre>
+
+    <h2>Q.7</h2>
+    <pre style="color: blue">
+         let s = [{name:'John',id:123,marks:98},
+                          {name:'Baba',id:101,marks:23},
+                          {name:'yoga'id:200,marks:45},
+                          {name:'Wick',id:115,marks:75}]
+           let ans=[] ;
+           let a=0;
+              for(let i=0;i&lts.length;i++) {
+                if(s[i].marks&lt50){
+                  s[i].marks+=15;
+                }
+                if(s[i].marks&gt50)
+                a+=s[i].marks;
+              }
+              console.log(a);        
+    </pre>
+    <h2>Q.8</h2>
+    <pre style="color: blue">
+        function student(name, class, rollNo){
+                this.name= name;
+                this.class=class;
+                this.rollNo=rollNo;
+        }
+        let Anita = new student("Anita","Five", 10);
+        let Anima = new student("Anima","six", 11);
+        let Namita = new student("Namita","ten", 20);
+        let Somnath = new student("Somnath","four", 5);
+        let Prasanto = new student("Prasanto","nine", 8);
+        let Monika = new student("Monika","three", 19);
+        console.log(Anita);
+        console.log(Anima);
+        console.log(Namita);
+        console.log(Somnath);
+        console.log(Prasanto);
+        console.log( Monika);
+    </pre>
+  </body>
+</html>
